@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 		--red: #F75A68;
 
 		--green-dark: #015F43;
-		--green: #00b47e;
+		--green: #00875F;
 		--green-light: #00B37E;
 
 		--gray-dark: #121214;
@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
 	.react-modal-content {
 		width: 100%;
 		max-width: 576px;
-		background: var(--backgroud);
+		background: var(--gray-lighter);
 		padding: 3rem;
 		position: relative;
 		border-radius: 0.25rem;
@@ -90,6 +90,19 @@ export const GlobalStyle = createGlobalStyle`
 		transition: filter 0.2s;
 		&:hover{
 			filter: brightness(0.8);
+		}
+	}
+
+	.react-modal-close {
+		position: absolute;
+		right: 1.5rem;
+		top: 1.5rem;
+		border: 0;
+		background:transparent;
+		transition: filter 0.2s;
+
+		&:hover{
+			filter:brightness(0.8)
 		}
 	}
 `;

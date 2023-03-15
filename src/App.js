@@ -6,6 +6,8 @@ import { GlobalStyle } from "./styles/global";
 import { useState } from "react";
 import { NewTransactionModal } from "./components/NewTransactionModal";
 
+import {TransactionsContext} from './TransactionsContext';
+
 Modal.setAppElement('#root');
 
 export function App() {
@@ -20,7 +22,7 @@ export function App() {
     setIsNewTransactionModalOpen(false);
   }
   return (
-    <>
+    <TransactionsContext.Provider value={[]}>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/> {/*repasse de função*/}
 
       <Dashboard />
@@ -31,6 +33,6 @@ export function App() {
       />
 
       <GlobalStyle />
-    </>
+    </TransactionsContext.Provider>
   );
 }
